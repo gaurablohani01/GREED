@@ -1,0 +1,48 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.colourful {
+  -webkit-background-clip: text !important;
+  background: linear-gradient(90deg, #c923df, #00b4db) !important;
+  background-clip: border-box !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  background-clip: text !important;
+  animation: typing 2s steps(18) infinite;
+}
+
+.head-content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.content-head {
+  line-height: 1.5;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.b,.a,.c {
+  margin-top: 50px;
+}
+
+.b .cards-intro h2 {
+  color: #fff;
+}
+.cards-intro{
+  margin-bottom: 15px;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+#text {
+  animation: cursor 0.4s step-end infinite alternate;
+}
