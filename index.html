@@ -365,7 +365,9 @@
 function showContactModal(courseTitle) {
     const modal = document.createElement('div');
     modal.innerHTML = `
-        <div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+      <div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50" style="
+    padding: 50px;
+">
             <div class="bg-white p-8 rounded-lg shadow-lg w-96">
                 <h3 class="text-xl font-bold mb-4">Contact Us to Enroll in ${courseTitle} Course</h3>
                 <p class="text-lg mb-4">To purchase the course, please contact us at the details below:</p>
