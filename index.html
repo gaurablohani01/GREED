@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./src/output.css" rel="stylesheet">
-       <link rel="shortcut icon" href="/src/img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/src/img/logo.png" type="image/x-icon">
     <meta name="description" content="GREED greed">
     <title>GREED</title>
     <link rel="stylesheet" href="/src/style.css">
@@ -286,81 +286,103 @@
     </script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const courses = [
-                {
-                    title: 'Python',
-                    description: 'Learn Python programming from scratch.',
-                    imageUrl: '/src/img/python.png',
-                    imgredirectUrl: '#',
-                },
-                {
-                    title: 'JavaScript',
-                    description: 'Master JavaScript for web development.',
-                    imageUrl: '/src/img/js.png',
-                    imgredirectUrl: '#',
-                },
-                {
-                    title: 'C++',
-                    description: 'Learn C++ for game development, system programming and many cases.',
-                    imageUrl: '/src/img/c++.png',
-                    imgredirectUrl: '#',
-                },
-                {
-                    title: 'Linux Administration',
-                    description: 'Master Linux Administration for understanding how linux works.',
-                    imageUrl: '/src/img/linux.png',
-                    imgredirectUrl: '#',
-                },
-                {
-                    title: 'Window Administration',
-                    description: 'Master Window Administration for understanding how window works.',
-                    imageUrl: '/src/img/window.png',
-                    imgredirectUrl: '#',
-                },
-                {
-                    title: 'Ethical Hacking',
-                    description: 'Learn Hacking from zero.',
-                    imageUrl: '/src/img/ethical.webp',
-                    imgredirectUrl: '#',
-                },
-                {
-                    title: 'Game Hacking',
-                    description: 'Learn Game Hacking to hack the game.',
-                    imageUrl: '/src/img/game_hacking.jpg',
-                    imgredirectUrl: '#',
-                },
-            ];
+       document.addEventListener('DOMContentLoaded', function () {
+    const courses = [
+        {
+            title: 'Python',
+            description: 'Learn Python programming from scratch.',
+            imageUrl: '/src/img/python.png',
+            imgredirectUrl: '#',
+        },
+        {
+            title: 'JavaScript',
+            description: 'Master JavaScript for web development.',
+            imageUrl: '/src/img/js.png',
+            imgredirectUrl: '#',
+        },
+        {
+            title: 'C++',
+            description: 'Learn C++ for game development, system programming, and many cases.',
+            imageUrl: '/src/img/c++.png',
+            imgredirectUrl: '#',
+        },
+        {
+            title: 'Linux Administration',
+            description: 'Master Linux Administration for understanding how Linux works.',
+            imageUrl: '/src/img/linux.png',
+            imgredirectUrl: '#',
+        },
+        {
+            title: 'Window Administration',
+            description: 'Master Window Administration for understanding how Windows works.',
+            imageUrl: '/src/img/window.png',
+            imgredirectUrl: '#',
+        },
+        {
+            title: 'Ethical Hacking',
+            description: 'Learn Hacking from scratch.',
+            imageUrl: '/src/img/ethical.webp',
+            imgredirectUrl: '#',
+        },
+        {
+            title: 'Game Hacking',
+            description: 'Learn Game Hacking to hack the game.',
+            imageUrl: '/src/img/game_hacking.jpg',
+            imgredirectUrl: '#',
+        },
+    ];
 
-            const container = document.getElementById('cards-container');
+    const container = document.getElementById('cards-container');
 
-            courses.forEach(course => {
-                const cardHtml = `
-                <div class="max-w-sm bg-gray-800 border border-gray-700 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 card transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                    <a href="${course.imgredirectUrl}" style="display: flex; height: 160px; justify-content: center; align-items: center;">
-                        <img class="rounded-t-lg w-32 h-32 object-contain" src="${course.imageUrl}" alt="${course.title}">
+    courses.forEach(course => {
+        const cardHtml = `
+            <div class="max-w-sm bg-gray-800 border border-gray-700 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 card transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                <a href="${course.imgredirectUrl}" style="display: flex; height: 160px; justify-content: center; align-items: center;">
+                    <img class="rounded-t-lg w-32 h-32 object-contain" src="${course.imageUrl}" alt="${course.title}">
+                </a>
+                <div class="p-5">
+                    <a href="${course.imgredirectUrl}">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">${course.title}</h5>
                     </a>
-                    <div class="p-5">
-                        <a href="${course.imgredirectUrl}">
-                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">${course.title}</h5>
-                        </a>
-                        <p class="mb-3 font-normal text-gray-300 dark:text-gray-400">${course.description}</p>
-                        <a href="${course.imgredirectUrl}"
-                            class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            Enroll Course
-                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M1 5h12m0 0L9 1m4 4L9 9" />
-                            </svg>
-                        </a>
-                    </div>
+                    <p class="mb-3 font-normal text-gray-300 dark:text-gray-400">${course.description}</p>
+                    <button class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" 
+                            onclick="showContactModal('${course.title}')">
+                        Enroll Course
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </button>
                 </div>
-            `;
+            </div>
+        `;
 
-                container.innerHTML += cardHtml;
-            });
-        });
+        container.innerHTML += cardHtml;
+    });
+});
+
+function showContactModal(courseTitle) {
+    const modal = document.createElement('div');
+    modal.innerHTML = `
+        <div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+            <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+                <h3 class="text-xl font-bold mb-4">Contact Us to Enroll in ${courseTitle} Course</h3>
+                <p class="text-lg mb-4">To purchase the course, please contact us at the details below:</p>
+                <p class="font-semibold text-lg mb-4">Email: <a href="mailto:info@lohanigaurab.com.np" class="text-blue-600">info@lohanigaurab.com.np</a></p>
+                <p class="font-semibold text-lg mb-4">Phone: <span class="text-blue-600">+977 970000000</span></p>
+                <p class="font-semibold text-lg mb-4">Or reach us on <span class="text-blue-600">WhatsApp</span> for instant support.</p>
+                <button class="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+}
+
+function closeModal() {
+    document.querySelector('.fixed').remove();
+}
+
     </script>
 
     <script>
